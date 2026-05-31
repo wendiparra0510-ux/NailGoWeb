@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nail Go</title>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <div class="navbar">
+
+            <div class="logo-container">
+                <img src="Logo_sin_letra.png" alt="Logo Nail Go" class="logo" style="width: 50px;">
+                <h1>NailGo</h1>
+            </div>
+
+            <div class="menu-toggle">☰</div>
+
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#profesionales">Nuestros Profesionales</a>
+                <a href="#cuenta">Mi Cuenta</a>
+                <a href="#agendar">Agendar Cita</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ================= INICIO ================= -->
+        <section id="inicio">
+
+            <div class="hero">
+
+                <div class="hero-left">
+                    <div class="hero-text">
+                        <h2>¡Regálate un momento de cuidado en la comodidad de tu hogar!</h2>
+                        <p>Agenda tu manicura y pedicura ideal en segundos.</p>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO -->
+                <div class="hero-agenda">
+
+                    <h3>Reserva tu cita</h3>
+
+                    <form action="ClienteServlet" method="post">
+
+                        <label>Nombre Cliente</label>
+                        <input type="text" name="nombre" required>
+
+                        <label>Servicio</label>
+                        <select name="servicio">
+                            <option>Manicura Tradicional</option>
+                            <option>Manicura Semipermanente</option>
+                            <option>Rubber Base</option>
+                            <option>Dipping</option>
+                            <option>Press On</option>
+                            <option>Escultura Polygel</option>
+                            <option>Escultura Acrilico</option>
+                            <option>Recubrimiento Polygel</option>
+                            <option>Recubrimiento Acrilico</option>
+                            <option>Mantenimiento Acrilico o Polygel</option>
+                            <option>Pies Tradicional</option>
+                            <option>Pies Semipermanente</option>
+                            <option>PediSpa Relajante</option>
+                        </select>
+
+                        <label>Profesional</label>
+                        <select name="profesional">
+                            <option>Wendy Parra</option>
+                            <option>Carol Morales</option>
+                            <option>Sophie Camacho</option>
+                            <option>Gabriela Camacho</option>
+                        </select>
+
+                        <label>Fecha</label>
+                        <input type="date" name="fecha">
+
+                        <label>Hora</label>
+                        <input type="time" name="hora">
+
+                        <button type="submit">
+                            Agendar Cita
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- SERVICIOS DESTACADOS -->
+            <div class="servicios-destacados">
+
+                <h2>Servicios Destacados</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>Manicura Semipermanente</h3>
+                        <img src="Manicura_semi1.png" alt="Manicura Semipermanente">
+                        <p>
+                            Disfruta de una manicura de larga duración con acabado brillante
+                            y resistente, de secado inmediato, que se mantiene impecable
+                            entre 3 y 4 semanas.
+                        </p>
+                        <span>$55.000</span>
+                        <button type="button">Seleccionar</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Pedispa Relajante</h3>
+                        <img src="PediSpa.png" alt="Pedicura Spa">
+                        <p>
+                            Sumérgete en una experiencia relajante que va más allá de lo
+                            convencional, combinando higiene, exfoliación, hidratación
+                            intensa, masajes y esmaltado tradicional.
+                        </p>
+                        <span>$50.000</span>
+                        <button type="button">Seleccionar</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Recubrimiento Polygel</h3>
+                        <img src="Recubrimiento_Polygel.png" alt="Recubrimiento Polygel">
+                        <p>
+                            Refuerza tus uñas naturales con esta técnica que combina la
+                            flexibilidad del gel con la resistencia del acrílico.
+                            Ideal para uñas quebradizas.
+                            Duración entre 3 y 4 semanas.
+                        </p>
+                        <span>$100.000</span>
+                        <button type="button">Seleccionar</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Press On</h3>
+                        <img src="uñas_PressOn.png" alt="Uñas Press On">
+                        <p>
+                            Luce uñas más largas y naturales con el sistema Soft Gel.
+                            Ideal para quienes buscan rapidez y comodidad,
+                            con una duración aproximada de 30 días.
+                        </p>
+                        <span>$85.000</span>
+                        <button type="button">Seleccionar</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>Nail Go © 2026 | Privacidad | Contacto</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
