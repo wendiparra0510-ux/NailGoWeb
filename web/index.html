@@ -11,151 +11,127 @@
     <!-- ================= NAVBAR ================= -->
     <header>
         <div class="navbar">
-
+            <!-- Logo + Nombre -->
             <div class="logo-container">
                 <img src="Logo_sin_letra.png" alt="Logo Nail Go" class="logo" style="width: 50px;">
                 <h1>NailGo</h1>
             </div>
 
+            <!-- Menú -->
+
             <div class="menu-toggle">☰</div>
-
             <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#profesionales">Nuestros Profesionales</a>
-                <a href="#cuenta">Mi Cuenta</a>
-                <a href="#agendar">Agendar Cita</a>
+                
+                    <a href="#inicio">Inicio</a> 
+                    <a href="#servicios">Servicios</a> 
+                    <a href="#profesionales">Nuestros Profesionales</a> 
+                    <a href="#cuenta">Mi Cuenta</a> 
+                    <a href="#agendar">Agendar Cita</a>
+               
             </nav>
-
         </div>
     </header>
 
     <main>
 
-        <!-- ================= INICIO ================= -->
-        <section id="inicio">
+    <!-- ================= INICIO ================= -->
+    <section id="inicio">
 
-            <div class="hero">
+        <!-- HERO / PRESENTACIÓN -->
+        <div class="hero">
+            <div class="hero-left">
+                <div class="hero-text">  
+                <h2>¡Regálate un momento de cuidado en la comodidad de tu hogar!</h2>
+                <p>Agenda tu manicura y pedicura ideal en segundos.</p>
+                </div> 
+            </div>
 
-                <div class="hero-left">
-                    <div class="hero-text">
-                        <h2>¡Regálate un momento de cuidado en la comodidad de tu hogar!</h2>
-                        <p>Agenda tu manicura y pedicura ideal en segundos.</p>
-                    </div>
+            <!-- Mini agendamiento -->
+            <div class="hero-agenda">
+                <h3>Reserva tu cita</h3>
+
+                <label>Servicio</label>
+                <select>
+                    <option>Manicura Tradicional</option>
+                    <option>Manicura Semipermanente</option>
+                    <option>Rubber Base</option>
+                    <option>Dipping</option>
+                    <option>Press On</option>
+                    <option>Escultura Polygel</option>
+                    <option>Escultura Acrilico</option>
+                    <option>Recubrimiento Polygel</option>
+                    <option>Recubrimiento Acrilico</option>
+                    <option>Mantenimiento Acrilico o Polygel</option>
+                    <option>Pies Tradicional</option>
+                    <option>Pies Semipermanente</option>
+                    <option>PediSpa Relajante</option>
+                </select>
+
+                <label>Profesional</label>
+                <select>
+                    <option>Wendy Parra</option>
+                    <option>Carol Morales</option>
+                    <option>Sophie Camacho</option>
+                    <option>Gabriela Camacho</option>
+                </select>
+
+                <label>Fecha</label>
+                <input type="date">
+
+                <label>Hora</label>
+                <input type="time">
+
+                <button type="button">Agendar Cita</button>
+            </div>
+        </div>
+
+        <!-- SERVICIOS DESTACADOS -->
+        <div class="servicios-destacados">
+            <h2>Servicios Destacados</h2>
+
+            <div class="cards">
+
+                <!-- Servicio 1 -->
+                <div class="card">
+                    <h3>Manicura Semipermanente</h3>
+                    <img src="Manicura_semi1.png" alt="Manicura Semipermanente" >
+                    <p>Disfruta de una manicura de larga duración con acabado brillante y resistente, de secado inmediato, que se mantiene impecable entre 3 y 4 semanas.</p>
+                    <span>$55.000</span>
+                    <button type="button">Seleccionar</button>
                 </div>
 
-                <!-- FORMULARIO -->
-                <div class="hero-agenda">
+                <!-- Servicio 2 -->
+                <div class="card">
+                    <h3>Pedispa Relajante</h3>
+                    <img src="PediSpa.png" alt="Pedicura Spa" >
+                    <p>Sumérgete en una experiencia relajante que va más allá de lo convencional, combinando higiene, exfoliación, hidratación intensa, masajes y esmaltado tradicional.</p>
+                    <span>$50.000</span>
+                    <button type="button">Seleccionar</button>
+                </div>
 
-                    <h3>Reserva tu cita</h3>
+                <!-- Servicio 3 -->
+                <div class="card">
+                    <h3>Recubrimiento Polygel</h3>
+                    <img src="Recubrimiento_Polygel.png" alt="Recubrimiento Polygel" >
+                    <p>Refuerza tus uñas naturales con esta técnica que combina la flexibilidad del gel con la resistencia del acrílico.<br>
+                    Ideal para uñas quebradizas. Duración:entre 3 y 4 semanas.</p>
+                    <span>$100.000</span>
+                    <button type="button">Seleccionar</button>
+                </div>
 
-                    <form action="ClienteServlet" method="post">
-
-                        <label>Nombre Cliente</label>
-                        <input type="text" name="nombre" required>
-
-                        <label>Servicio</label>
-                        <select name="servicio">
-                            <option>Manicura Tradicional</option>
-                            <option>Manicura Semipermanente</option>
-                            <option>Rubber Base</option>
-                            <option>Dipping</option>
-                            <option>Press On</option>
-                            <option>Escultura Polygel</option>
-                            <option>Escultura Acrilico</option>
-                            <option>Recubrimiento Polygel</option>
-                            <option>Recubrimiento Acrilico</option>
-                            <option>Mantenimiento Acrilico o Polygel</option>
-                            <option>Pies Tradicional</option>
-                            <option>Pies Semipermanente</option>
-                            <option>PediSpa Relajante</option>
-                        </select>
-
-                        <label>Profesional</label>
-                        <select name="profesional">
-                            <option>Wendy Parra</option>
-                            <option>Carol Morales</option>
-                            <option>Sophie Camacho</option>
-                            <option>Gabriela Camacho</option>
-                        </select>
-
-                        <label>Fecha</label>
-                        <input type="date" name="fecha">
-
-                        <label>Hora</label>
-                        <input type="time" name="hora">
-
-                        <button type="submit">
-                            Agendar Cita
-                        </button>
-
-                    </form>
-
+                <!-- Servicio 4 -->
+                <div class="card">
+                    <h3>Press On</h3>
+                    <img src="uñas_PressOn.png" alt="Uñas uñas_PressOn" >
+                    <p>Luce uñas más largas y naturales con el sistema Soft Gel.Ideal para quienes buscan rapidez y comodidad, con una duración de 30 días aproximadamente y un resultado elegante y resistente.</p>
+                    <span>$850</span>
+                    <button type="button">Seleccionar</button>
                 </div>
 
             </div>
+        </div>
 
-            <!-- SERVICIOS DESTACADOS -->
-            <div class="servicios-destacados">
-
-                <h2>Servicios Destacados</h2>
-
-                <div class="cards">
-
-                    <div class="card">
-                        <h3>Manicura Semipermanente</h3>
-                        <img src="Manicura_semi1.png" alt="Manicura Semipermanente">
-                        <p>
-                            Disfruta de una manicura de larga duración con acabado brillante
-                            y resistente, de secado inmediato, que se mantiene impecable
-                            entre 3 y 4 semanas.
-                        </p>
-                        <span>$55.000</span>
-                        <button type="button">Seleccionar</button>
-                    </div>
-
-                    <div class="card">
-                        <h3>Pedispa Relajante</h3>
-                        <img src="PediSpa.png" alt="Pedicura Spa">
-                        <p>
-                            Sumérgete en una experiencia relajante que va más allá de lo
-                            convencional, combinando higiene, exfoliación, hidratación
-                            intensa, masajes y esmaltado tradicional.
-                        </p>
-                        <span>$50.000</span>
-                        <button type="button">Seleccionar</button>
-                    </div>
-
-                    <div class="card">
-                        <h3>Recubrimiento Polygel</h3>
-                        <img src="Recubrimiento_Polygel.png" alt="Recubrimiento Polygel">
-                        <p>
-                            Refuerza tus uñas naturales con esta técnica que combina la
-                            flexibilidad del gel con la resistencia del acrílico.
-                            Ideal para uñas quebradizas.
-                            Duración entre 3 y 4 semanas.
-                        </p>
-                        <span>$100.000</span>
-                        <button type="button">Seleccionar</button>
-                    </div>
-
-                    <div class="card">
-                        <h3>Press On</h3>
-                        <img src="uñas_PressOn.png" alt="Uñas Press On">
-                        <p>
-                            Luce uñas más largas y naturales con el sistema Soft Gel.
-                            Ideal para quienes buscan rapidez y comodidad,
-                            con una duración aproximada de 30 días.
-                        </p>
-                        <span>$85.000</span>
-                        <button type="button">Seleccionar</button>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+    </section>
 
     </main>
 

@@ -1,0 +1,336 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background-color: #fdf6f5;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    background-color: #f8e1dc;
+    padding: 15px 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO IZQUIERDA */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* MENÚ DERECHA */
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4a4a;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #d88c9a;
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* IZQUIERDA (IMAGEN) */
+.hero-left {
+    position: relative;
+    flex: 2;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-image: url('Uñas_agenda_ahora.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* CAPA OSCURA */
+.hero-left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
+/* TEXTO SOBRE IMAGEN */
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    max-width: 60%;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 16px;
+}
+
+/* DERECHA (AGENDA) */
+.hero-agenda {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero-agenda h3 {
+    margin-bottom: 15px;
+}
+
+.hero-agenda label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.hero-agenda select,
+.hero-agenda input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.hero-agenda button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #d88c9a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero-agenda button:hover {
+    background-color: #c57685;
+}
+
+/* ================= SERVICIOS ================= */
+.servicios-destacados {
+    padding: 40px;
+    text-align: center;
+}
+
+.servicios-destacados h2 {
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* H3 IGUALES */
+.card h3 {
+    margin-bottom: 10px;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+}
+
+/* IMÁGENES UNIFORMES */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO FLEXIBLE */
+.card p {
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+/* PRECIO */
+.card span {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* BOTÓN */
+.card button {
+    background-color: #d88c9a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    background-color: #c57685;
+}
+
+/* HOVER CARD */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #f8e1dc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-left {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-text {
+        bottom: 20px;
+        left: 20px;
+        max-width: 80%;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-agenda {
+        width: 100%;
+    }
+
+    /* CARDS */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* ================= RESPONSIVE NAV ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto; 
+    }
+
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        right: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: #f8e1dc;
+        border-radius: 10px;
+        padding: 10px;
+
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 300px;
+        opacity: 1;
+    }
+}
